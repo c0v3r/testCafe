@@ -1,0 +1,27 @@
+{
+  "name": "ecommerce",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "testcafe chrome tests/",
+    "test:smoke": "testcafe chrome tests/*js --test-meta Env=smoke",
+    "test:regression": "testcafe chrome tests/*js --test-meta Env=regression",
+    "test:crossbrowsing": "testcafe chrome,firefox tests/*js --test-meta Env=Staging",
+    "test:paralelism": "testcafe chrome -c 2 tests/*js",
+    "test:report": "cross-env ENVIRONMENT=staging testcafe chrome:headless tests/*js --reporter html:report/sampleTest.html --test-meta Env=regression",
+    "test:testing": "cross-env ENVIRONMENT=testing testcafe chrome tests/*js --test-meta Env=regression",
+    "test:staging": "cross-env ENVIRONMENT=staging testcafe chrome tests/*js --test-meta Env=regression",
+    "test:headless": "cross-env ENVIRONMENT=staging testcafe chrome:headless tests/*js --test-meta Env=regression"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "testcafe": "^3.0.1"
+  },
+  "dependencies": {
+    "testcafe-reporter-html": "^1.4.6"
+  }
+}

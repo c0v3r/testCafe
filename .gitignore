@@ -1,0 +1,28 @@
+# Ignore node_modules and report
+node_modules/
+screenshots/
+
+# Ignore all log files
+*.log
+
+# Ignore executables/binaries
+*.exe
+*.bin
+**/*/bin
+
+# Ignore media files
+*.png
+*.jpeg
+*.jpg
+*.mp4
+*.webm
+
+# Ignore documentation
+*.rst
+*.md
+
+# Ignore sensitive data
+credentials.yml
+
+# Ignore report
+*.html
