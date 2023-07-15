@@ -21,7 +21,7 @@ jobs:
     - name: Install cross-env
       run: npm i cross-env  
     - name: Run tests
-      run: testcafe chrome -c 1 tests/*js --reporter html:report/sampleTest.html
+      run: npm run test:report
     - uses: actions/upload-artifact@v3
       if: always()
       with:
