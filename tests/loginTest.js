@@ -1,4 +1,4 @@
-import LoginPage from '../page-object/LoginPage'
+import LoginPage from '../page-object/loginPage'
 import * as userDataSet from "../test-data/user.data.json";
 
 
